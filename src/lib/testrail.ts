@@ -44,9 +44,12 @@ export class TestRail {
   }
 
   public addResultsForCases(runID, results: TestRailResult[]) {
-    this._post(`add_results_for_cases/${runID}`, {
+    /*this._post(`add_results_for_cases/${runID}`, {
       results: results,
-    });
+    });*/
+    console.log('add_results_for_cases/${runID}');
+    console.log('results:');
+    console.log(results);
   }
 
   public getLastTestRun(projectId, suiteId) {

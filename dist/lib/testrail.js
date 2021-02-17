@@ -54,9 +54,12 @@ class TestRail {
         });
     }
     addResultsForCases(runID, results) {
-        this._post(`add_results_for_cases/${runID}`, {
-            results: results,
-        });
+        /*this._post(`add_results_for_cases/${runID}`, {
+          results: results,
+        });*/
+        console.log('add_results_for_cases/${runID}');
+        console.log('results:');
+        console.log(results);
     }
     getLastTestRun(projectId, suiteId) {
         return this._get(`get_runs/${projectId}&suite_id=${suiteId}&limit=1`);
